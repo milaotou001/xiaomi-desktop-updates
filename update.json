@@ -2,7 +2,7 @@
   "version": "1.0.2",
   "update_mode": "prompt",
   "package_type": "windows-x64",
-  "download_url": "https://github.com/milaotou001/xiaomi-desktop-updates/releases/download/v1.0.2/1.0.2.zip",
+  "download_url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/1.0.2.zip",
   "sha256": "90e0f7cf6739f24edc24a8f94753837e52d5ae75522cdb5c4f4d20ecca068ec2",
   "release_notes": "第四阶段自动回滚验收故障版：故意不写 healthy 标记，仅供测试"
 }
