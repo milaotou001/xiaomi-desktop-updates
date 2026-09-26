@@ -1,8 +1,9 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.4",
   "update_mode": "prompt",
   "package_type": "windows-x64",
-  "download_url": "https://github.com/milaotou001/xiaomi-desktop-updates/releases/download/v1.0.1/1.0.1.zip",
-  "sha256": "d5e06b45d447bafd4ed0107cb241d7eb3c1995daf36f1df233d9497ad972e12a",
-  "release_notes": "第四阶段真实 HTTPS 更新验收测试版"
+  "download_url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/1.0.4.zip",
+  "package_size": 147377809,
+  "sha256": "cf86ce942301a50f3cbb25ac0fa0a81ff7d1fbad9ab0165f7269cd142fcbbc1d",
+  "release_notes": "阶段 4.5E 正常健康更新验收版：后台准备、稍后、重启及本地安装验证"
 }
