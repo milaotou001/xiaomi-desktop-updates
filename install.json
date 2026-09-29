@@ -11,8 +11,8 @@
       "app_version": "1.0.0",
       "deployment_version": "1.0.0",
       "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/v1.0.0/xiaomi-teacher-deploy-windows-x64-v1.0.0.zip",
-      "sha256": "71eb01240f46cc3dc9dbd534aa47330c340dc0c05a4190bac9570dc54603b698",
-      "size": 147459277
+      "sha256": "996dd5b166671e8130eb5e65d0218efefcb8da1d89cb6aa7488ab2ce48883126",
+      "size": 147462476
     },
     "kylin-arm64": {
       "platform": "linux",
