@@ -9,10 +9,10 @@
       "format": "zip",
       "availability": "ready",
       "app_version": "1.0.0",
-      "deployment_version": "1.0.0",
-      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/v1.0.0/xiaomi-teacher-deploy-windows-x64-v1.0.0.zip",
-      "sha256": "996dd5b166671e8130eb5e65d0218efefcb8da1d89cb6aa7488ab2ce48883126",
-      "size": 147462476
+      "deployment_version": "1.0.1",
+      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/v1.0.1/xiaomi-teacher-deploy-windows-x64-v1.0.1.zip",
+      "sha256": "187a0d9d39dd10500f45baa793f07181a94c202d91a85c795dbd6cfeea71c279",
+      "size": 147464834
     },
     "kylin-arm64": {
       "platform": "linux",

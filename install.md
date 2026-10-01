@@ -1,57 +1,36 @@
 # 小咪桌宠 · WorkBuddy 在线部署入口
 
-你正在帮助老师**首次安装**小咪桌宠。只从下面固定地址读取机器清单：
+你正在帮助老师首次安装小咪桌宠。老师已在 WorkBuddy 中完成连接器和钉钉授权。请主动完成本机部署、教师画像、四个日报/提醒任务和最终验收；只在确实需要时请老师确认关注群与晚报时间。
 
-https://milaotou001.github.io/xiaomi-desktop-updates/install.json
+## 1. 确认平台
 
-本入口只负责选对教师快速部署 ZIP、安全下载和解压。解压后，必须完整读取包内的《请让WorkBuddy读取这个文件夹.txt》，后续安装、授权和检查以该文件为准。`update.json` 是已安装 Windows 桌宠的更新清单，**不是首次安装入口**。
+- Windows 10/11 x64 或 AMD64：继续执行下面的一次解压流程。
+- 银河麒麟 ARM64：读取 `https://milaotou001.github.io/xiaomi-desktop-updates/install.json` 中 `kylin-arm64` 的状态；目前尚未发布，安全停止。
+- 其他平台、版本或架构不确定：停止并向老师说明。不要猜测、不要拿桌宠更新包代替教师部署包。
 
-## 1. 保守判断平台
+## 2. 一次下载、一次校验、一次解压
 
-- Windows：确认是 Windows 10/11，且 CPU/操作系统为 x64 或 AMD64，选择 `windows-x64`。
-- 麒麟：确认是 Linux、银河麒麟（或包内现有说明明确支持的麒麟兼容环境），且 CPU 为 ARM64 或 aarch64，选择 `kylin-arm64`。不能只凭“Linux”选择麒麟包。
-- 无法可靠确认、版本不支持、架构不符时停止，向老师说明暂未提供对应部署包。不要猜测。
+在 WorkBuddy 的 PowerShell 工具中执行以下**一个代码块**。它先校验安装脚本本身，再由脚本读取固定的 `install.json`，核对平台、包大小和整包 SHA256，检查 ZIP 路径，直接解压到 `%LOCALAPPDATA%\Programs` 同盘临时目录，最后通过目录改名放到固定位置。无须先解压到系统临时目录，再复制整个约 360 MB 的文件夹。
 
-## 2. 读取并核对官方清单
+```powershell
+$ErrorActionPreference = 'Stop'
+$installScript = Join-Path ([System.IO.Path]::GetTempPath()) ('xiaomi-install-' + [guid]::NewGuid().ToString('N') + '.ps1')
+Invoke-WebRequest -Uri 'https://milaotou001.github.io/xiaomi-desktop-updates/install-windows.ps1' -OutFile $installScript -UseBasicParsing
+$stream = [System.IO.File]::OpenRead($installScript)
+$sha = [System.Security.Cryptography.SHA256]::Create()
+try { $actual = ([System.BitConverter]::ToString($sha.ComputeHash($stream))).Replace('-', '').ToLowerInvariant() }
+finally { $stream.Dispose(); $sha.Dispose() }
+if ($actual -ne '75edb91099640b9622b0fcb6a1ad8808a6c62b5a7296412ccc4d8d0aa18c74d5') { throw '安装脚本校验失败，停止部署。' }
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+& $installScript
+```
 
-通过 HTTPS 读取上方**准确地址**，确认 `schema_version` 为 `1`、`product` 为“小咪桌宠”，并且只选与已确认平台对应的条目。所选条目必须满足：`availability` 为 `ready`；`url` 是清单给出的可信 HTTPS 下载地址（当前 Windows 包由阿里云 OSS 分发）；`sha256` 是 64 位十六进制；`size` 如提供则是正整数。任一字段仍为 `null`、`pending_release` 或格式错误时，停止并告诉老师该平台的正式部署包尚未发布。不要自行搜索或拼接下载地址。
+脚本返回 `packageRoot`。若工作环境抓不到标准输出，固定目录是 `%LOCALAPPDATA%\Programs\XiaomiDesktopPetTeacher`，用系统 API 取得真实 `LocalApplicationData`，不要写死 C 盘。已有该目录时脚本会停止，保护现有安装和老师数据；不要覆盖。校验或解压失败时不得运行半成品，也不得把临时目录当成安装目录。
 
-## 3. 下载、校验、解压
+## 3. 读取包内说明并完成部署
 
-1. 把所选 ZIP 下载到**新建的临时目录**；即使临时目录中已有同名文件，也不能因文件名相同而复用旧文件。下载和每次跳转都必须保持 HTTPS。
-2. 如清单提供 `size`，先核对下载文件的实际字节数。
-3. 从**刚下载的完整磁盘文件**计算 SHA-256，与清单逐字节比较。不一致就停止，隔离损坏文件并报告校验失败；绝不能运行或解压它。
-4. 校验成功后，检查 ZIP 内路径不会逃出目标目录，再解压到**固定的部署目录**：
+完整读取固定目录顶层的《请让WorkBuddy读取这个文件夹.txt》，按其“快速部署流程”执行。先运行 `Prepare` 阶段；普通桌面会话若支持后台 PowerShell，则让 `Runtime` 阶段在后台继续，同时完成教师画像、关注群确认与四个日报任务；等待后台结果后运行 `Final` 阶段并验收。后台工具不可用时顺序执行这几个阶段，检查要求相同。
 
-   ```
-   %LOCALAPPDATA%\Programs\XiaomiDesktopPetTeacher
-   ```
+四个任务必须复用已有的稳定任务 ID，不得因为加速而重复创建。老师本人决定晚报时间，关注群只取本人确认且授权后实际可见的群。最终用老师听得懂的话报告结果和剩余步骤。
 
-   （通常是 `C:\Users\<用户>\AppData\Local\Programs\XiaomiDesktopPetTeacher`。
-   这就是包内《请让WorkBuddy读取这个文件夹.txt》指定的长期目录——**以包内说明为准**，别另挑位置。
-   直接解压到这里，包内说明就会认定「已就位」，不会再多复制一份。
-   **这个位置必须固定、必须长期存在**：小咪本体住在这里，开机自启动也指向这里。
-   放到临时目录里，系统清理临时文件时会把小咪本体一起清掉——小咪会凭空消失，自启动也会失效。）
-
-   - 目标目录里已经有上一次装的版本 → 就是**升级**：直接解压覆盖（同名文件以新包为准），
-     不要先删掉整个目录，更不要动老师的数据目录（`%APPDATA%\desktop-pet`）。
-   - 目标目录存在但里面没有 `runtime\Desktop Pet.exe`（不是小咪的安装目录）→ 停止，先问老师。
-   - 不要只打开压缩包预览、不要在临时目录里就地安装；装好以后把下载的 ZIP 删掉即可。
-
-## 4. 交给包内现有部署说明
-
-在解压所得教师快速部署包的顶层查找《请让WorkBuddy读取这个文件夹.txt》并**完整读取**。找不到就停止，不自行设计安装步骤。找到后以该文件为准完成本机部署；涉及老师本人扫码、登录或授权时交给本人操作。不要替老师授权，不要扩大钉钉读取范围。
-
-## 5. 最终检查与报告
-
-依照包内说明确认：小咪能够正常启动、必要的本地文件存在、**开机自启动已设置**、WorkBuddy 与钉钉接入状态符合该包要求；下载或解压失败时不留下半安装状态。
-
-**「开机自启动」这一项没通过，就不算装完。** 怎么确认：读包内说明里的健康检查结果，其中「开机自启动」必须是**通过**。
-这一项最常见的失败原因是包被解压到了临时目录——回到第 3 步，把它移到固定部署目录，再重跑一次包内安装。
-没有自启动的后果是：老师关机再开机屏幕上就没有小咪了，而日报其实一直在正常生成，老师会以为小咪坏了。
-
-**只有在「开机自启动」确实通过时**，才能对老师说「以后开机它会自己回来」；没通过就照实说还差这一步、要做什么。
-
-向老师简短说明结果及仍需本人完成的操作。
-
-当前 Windows x64 教师包已上传阿里云 OSS，清单标记 `ready`；麒麟 ARM64 包尚未完成，标记 `not_ready`。麒麟必须在第 2 步安全停止，不能把本地文件夹或旧更新 ZIP 当作可下载安装包。这不影响已经安装的小咪使用独立的 `update.json` 更新。
+`update.json` 是已安装桌宠的旧更新清单，不用于首次安装。自动更新暂不在本次部署范围内。
