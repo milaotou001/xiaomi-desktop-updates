@@ -1,6 +1,10 @@
 # 小咪桌宠 · WorkBuddy 在线部署入口
 
-你正在帮助老师首次安装小咪桌宠。老师已在 WorkBuddy 中完成连接器和钉钉授权。请主动完成本机部署、教师画像、四个日报/提醒任务和最终验收；只在确实需要时请老师确认关注群与晚报时间。
+你正在帮助老师安装或升级小咪桌宠。先只读检查本机是否已有小咪及教师配置；不要让老师先卸载。
+
+**已有安装，或老师明确要求更新：先读取 [保留配置升级说明](https://milaotou001.github.io/xiaomi-desktop-updates/upgrade.md)，按说明由你下载新版、核对现场环境并升级。保留身份、偏好、关注群、授权、日报时间、个人设置和已处理记录。不要执行下面的首次安装脚本，不重新建立画像或重建任务。**
+
+**确认首次安装：**继续下面流程。老师已在 WorkBuddy 中完成连接器和钉钉授权时沿用现状，不重复授权。请主动完成本机部署、教师画像、四个日报/提醒任务和最终验收；只在确实需要时请老师确认关注群与晚报时间。
 
 ## 1. 确认平台
 
@@ -25,7 +29,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
 & $installScript
 ```
 
-脚本返回 `packageRoot`。若工作环境抓不到标准输出，固定目录是 `%LOCALAPPDATA%\Programs\XiaomiDesktopPetTeacher`，用系统 API 取得真实 `LocalApplicationData`，不要写死 C 盘。已有该目录时脚本会停止，保护现有安装和老师数据；不要覆盖。校验或解压失败时不得运行半成品，也不得把临时目录当成安装目录。
+脚本返回 `packageRoot`。若工作环境抓不到标准输出，固定目录是 `%LOCALAPPDATA%\Programs\XiaomiDesktopPetTeacher`，用系统 API 取得真实 `LocalApplicationData`，不要写死 C 盘。已有该目录时脚本会停止，保护现有安装和老师数据；改读上述升级说明，不覆盖或删除旧目录。校验或解压失败时不得运行半成品，也不得把临时目录当成安装目录。
 
 ## 3. 读取包内说明并完成部署
 

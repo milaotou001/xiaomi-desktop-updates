@@ -1,28 +1,28 @@
 {
-  "schema_version": 1,
-  "product": "小咪桌宠",
-  "latest_version": "1.0.0",
-  "packages": {
-    "windows-x64": {
-      "platform": "windows",
-      "arch": "x64",
-      "format": "zip",
-      "availability": "ready",
-      "app_version": "1.0.0",
-      "deployment_version": "1.0.1",
-      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/v1.0.1/xiaomi-teacher-deploy-windows-x64-v1.0.1.zip",
-      "sha256": "187a0d9d39dd10500f45baa793f07181a94c202d91a85c795dbd6cfeea71c279",
-      "size": 147464834
-    },
-    "kylin-arm64": {
-      "platform": "linux",
-      "distribution": "kylin",
-      "arch": "arm64",
-      "format": "zip",
-      "availability": "not_ready",
-      "url": null,
-      "sha256": null,
-      "size": null
-    }
-  }
+    "schema_version":  1,
+    "product":  "小咪桌宠",
+    "latest_version":  "1.0.1",
+    "packages":  {
+                     "windows-x64":  {
+                                         "platform":  "windows",
+                                         "arch":  "x64",
+                                         "format":  "zip",
+                                         "availability":  "ready",
+                                         "app_version":  "1.0.1",
+                                         "deployment_version":  "1.0.2",
+                                         "url":  "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/v1.0.2/xiaomi-teacher-deploy-windows-x64-v1.0.2-upgrade-candidate-final.zip",
+                                         "sha256":  "557386fa910520fcfc196d91773b98a3afc43cf711338e0c12cfc28231f4957d",
+                                         "size":  147487036
+                                     },
+                     "kylin-arm64":  {
+                                         "platform":  "linux",
+                                         "distribution":  "kylin",
+                                         "arch":  "arm64",
+                                         "format":  "zip",
+                                         "availability":  "not_ready",
+                                         "url":  null,
+                                         "sha256":  null,
+                                         "size":  null
+                                     }
+                 }
 }
