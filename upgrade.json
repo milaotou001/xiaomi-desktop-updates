@@ -1,27 +1,27 @@
 {
-    "schema_version":  1,
-    "product":  "小咪桌宠",
-    "purpose":  "preserve-user-data-upgrade",
-    "packages":  {
-                     "windows-x64":  {
-                                         "platform":  "windows",
-                                         "arch":  "x64",
-                                         "availability":  "ready",
-                                         "app_version":  "1.0.1",
-                                         "deployment_version":  "1.0.2",
-                                         "format":  "zip",
-                                         "url":  "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/v1.0.2/xiaomi-teacher-deploy-windows-x64-v1.0.2-upgrade-candidate-final.zip",
-                                         "sha256":  "557386fa910520fcfc196d91773b98a3afc43cf711338e0c12cfc28231f4957d",
-                                         "size":  147487036,
-                                         "instructions_file":  "给WorkBuddy-升级小咪.txt"
-                                     },
-                     "kylin-arm64":  {
-                                         "platform":  "linux",
-                                         "arch":  "arm64",
-                                         "availability":  "not_ready",
-                                         "url":  null,
-                                         "sha256":  null,
-                                         "size":  null
-                                     }
-                 }
+  "schema_version": 1,
+  "product": "小咪桌宠",
+  "purpose": "preserve-user-data-upgrade",
+  "packages": {
+    "windows-x64": {
+      "platform": "windows",
+      "arch": "x64",
+      "availability": "ready",
+      "app_version": "1.0.2",
+      "deployment_version": "1.0.3",
+      "format": "zip",
+      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/v.1.0.3/xiaomi-teacher-deploy-windows-x64-v1.0.3.zip",
+      "sha256": "e86bee76a5e1b6af25956ac0d6d6b06aabdbfa3ade435332621c10e9e4443ad9",
+      "size": 147491550,
+      "instructions_file": "给WorkBuddy-升级小咪.txt"
+    },
+    "kylin-arm64": {
+      "platform": "linux",
+      "arch": "arm64",
+      "availability": "not_ready",
+      "url": null,
+      "sha256": null,
+      "size": null
+    }
+  }
 }
