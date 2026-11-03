@@ -1,18 +1,19 @@
 {
   "schema_version": 1,
   "product": "小咪桌宠",
-  "latest_version": "1.0.2",
+  "latest_version": "1.0.4",
   "packages": {
     "windows-x64": {
       "platform": "windows",
       "arch": "x64",
       "format": "zip",
       "availability": "ready",
-      "app_version": "1.0.2",
-      "deployment_version": "1.0.3",
-      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/v.1.0.3/xiaomi-teacher-deploy-windows-x64-v1.0.3.zip",
-      "sha256": "e86bee76a5e1b6af25956ac0d6d6b06aabdbfa3ade435332621c10e9e4443ad9",
-      "size": 147491550
+      "app_version": "1.0.4",
+      "deployment_version": "1.0.4",
+      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/v1.0.4/xiaomi-teacher-deploy-windows-x64-v1.0.4.zip",
+      "sha256": "5e3601768d23aca1e629d396baea108d87499a8fc0b50cc1e69a46db3b95a4f5",
+      "size": 147495874,
+      "workbuddy_skill_version": "1.0.4"
     },
     "kylin-arm64": {
       "platform": "linux",
