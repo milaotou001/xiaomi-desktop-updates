@@ -4,7 +4,7 @@
 
 请在老师这台电脑上现场检查后协助升级，不要求老师自己找安装目录，不让老师先卸载或重做首次引导。
 
-当前发布的是经维护者复核并核验公网文件的 Windows 1.0.4 完整包，桌宠应用、部署包和WorkBuddy小咪联动技能统一1.0.4，不更换WorkBuddy应用本身。新增日报先查旧编号、记着相对日期随当天变化；保留原身份、偏好、设置、已处理及记着记录。升级后核对桌宠关于页、技能SKILL.md的version，以及四个原任务prompt的`XIAOMI_INTEGRATION_VERSION=1.0.4`；按原任务ID回读完整新规则，不能仅看到桌宠已更新就宣布两端完成。**以本站 `upgrade.json` 的 `ready` 和对应大小、SHA256为准。**
+当前发布的是经维护者复核并核验公网文件的 Windows 1.0.5 完整包，桌宠应用、部署包和WorkBuddy小咪联动技能统一1.0.5，不更换WorkBuddy应用本身。新增普通日报/已处理只显示当天、未完成记着跨天、完成后仅当天可恢复；面板划掉停止关联提醒，旧无关联候选需WorkBuddy补充关联；按实际分工筛选，适配教师、中层及校级管理和兼任职责。升级保留身份、偏好、设置、授权、已处理与记着数据，不卸载重建。升级后核对桌宠关于页、技能SKILL.md的version，以及四个原任务prompt的`XIAOMI_INTEGRATION_VERSION=1.0.5`，按原任务ID回读完整职责筛选及提醒关联规则；原任务时间、时区和启用状态保留。**以本站 `upgrade.json` 的 `ready` 和对应大小、SHA256为准。**
 
 1. 读取同站升级清单：[upgrade.json](https://milaotou001.github.io/xiaomi-desktop-updates/upgrade.json)。它与新安装清单、桌宠旧自动更新清单分开。
 2. 只有 `windows-x64.availability` 为 `ready`、HTTPS下载地址/大小/SHA256均完整且版本明确时才继续。清单不可用、`pending_release`、不支持的平台或信息缺失时，明确说明升级尚未发布；不能改用旧版 `install.json` 冒充新版升级，不猜地址。
