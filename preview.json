@@ -2,21 +2,21 @@
   "schema_version": 1,
   "product": "小咪桌宠",
   "channel": "preview",
-  "latest_version": "1.0.6",
+  "latest_version": "1.0.7",
   "explicit_opt_in_required": true,
-  "verification_status": "local_tests_passed_real_scheduled_run_pending",
+  "verification_status": "local_upgrade_and_empty_window_passed_school_scheduled_run_pending",
   "packages": {
     "windows-x64": {
       "platform": "windows",
       "arch": "x64",
       "format": "zip",
       "availability": "ready",
-      "app_version": "1.0.6",
-      "deployment_version": "1.0.6",
-      "workbuddy_skill_version": "1.0.6",
-      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/preview/v1.0.6/xiaomi-teacher-deploy-windows-x64-v1.0.6-preview.zip",
-      "sha256": "b83868eb7c34d4dfb91ac87f9a7df2cb591cbe5389a82c0816d201286ffe964c",
-      "size": 147532432,
+      "app_version": "1.0.7",
+      "deployment_version": "1.0.7",
+      "workbuddy_skill_version": "1.0.7",
+      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/preview/v1.0.7/xiaomi-teacher-deploy-windows-x64-v1.0.7-preview.zip",
+      "sha256": "c18a334d4d4d8421766a4b07c91bb300480e4ca90578ac6a2a8a2ad4d99a85ad",
+      "size": 147534848,
       "install_instructions_file": "请让WorkBuddy读取这个文件夹.txt",
       "upgrade_instructions_file": "给WorkBuddy-升级小咪.txt"
     },
@@ -27,6 +27,20 @@
       "url": null,
       "sha256": null,
       "size": null
+    }
+  },
+  "upgrade_packages": {
+    "windows-x64": {
+      "format": "zip",
+      "package_kind": "delta",
+      "availability": "ready",
+      "deployment_version": "1.0.7",
+      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/preview/v1.0.7/xiaomi-teacher-upgrade-windows-x64-v1.0.7-preview.zip",
+      "sha256": "a777e9bbe7c4d971352a844de9a6ddc44d92e62e65a775dee10b714f048b7f0c",
+      "size": 3158303,
+      "instructions_file": "给WorkBuddy-升级小咪.txt",
+      "fallback": "packages.windows-x64",
+      "requires_exact_installed_runtime": true
     }
   }
 }
