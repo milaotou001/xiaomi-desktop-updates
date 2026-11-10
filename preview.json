@@ -29,18 +29,5 @@
       "size": null
     }
   },
-  "upgrade_packages": {
-    "windows-x64": {
-      "format": "zip",
-      "package_kind": "delta",
-      "availability": "ready",
-      "deployment_version": "1.0.7",
-      "url": "https://huaxiao-xiaomi-updates-001.oss-cn-hangzhou.aliyuncs.com/deployment/windows-x64/preview/v1.0.7/xiaomi-teacher-upgrade-windows-x64-v1.0.7-preview.zip",
-      "sha256": "a777e9bbe7c4d971352a844de9a6ddc44d92e62e65a775dee10b714f048b7f0c",
-      "size": 3158303,
-      "instructions_file": "给WorkBuddy-升级小咪.txt",
-      "fallback": "packages.windows-x64",
-      "requires_exact_installed_runtime": true
-    }
-  }
+  "upgrade_strategy": "full_package_preserve_data"
 }
