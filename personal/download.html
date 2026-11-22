@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="把一句话发给 WorkBuddy，免费安装小咪桌宠 Windows x64 正式版。跟着图文装好 WorkBuddy、授权关注群并查看第一份日报。">
+  <title>安装与入门｜小咪桌宠</title>
+  <link rel="icon" href="assets/xiaomi.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="content.css">
+  <script src="site-config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="index.html" aria-label="小咪桌宠首页">
+        <svg class="brand-cat" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M7.5 13.2 5.4 5.8l6.8 3.1A11.5 11.5 0 0 1 16 8.2c1.3 0 2.6.3 3.8.7l6.8-3.1-2.1 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M7.5 13.2c0 7 3.8 11.2 8.5 11.2s8.5-4.2 8.5-11.2" fill="#f7e7a8" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12.4" cy="17.2" r="1" fill="currentColor"/>
+          <circle cx="19.6" cy="17.2" r="1" fill="currentColor"/>
+          <path d="M14.6 20.5c.9.8 1.9.8 2.8 0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+        <span>小咪桌宠</span>
+      </a>
+      <button class="nav-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="download.html" aria-current="page">安装与入门</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main" id="main">
+    <section class="download-hero" id="install-command-box">
+      <div class="wrap">
+        <h1 class="display">一句话安装小咪</h1>
+        <p class="page-lede">复制下方这句话，在 WorkBuddy 里新建对话，粘贴并发送。还没装 WorkBuddy？<a class="text-link" href="#first-install">看首次安装图文</a>。</p>
+
+        <div class="install-box">
+          <label for="install-command">发给 WorkBuddy 的安装指令</label>
+          <textarea id="install-command" readonly rows="3">请访问 https://milaotou001.github.io/xiaomi-desktop-updates/install.md，按说明帮我安装小咪桌宠 1.0.5，或保留资料升级。</textarea>
+          <div class="copy-row">
+            <button class="pill pill-primary" type="button" data-copy-install disabled>复制安装指令</button>
+            <p id="copy-status" role="status" aria-live="polite"></p>
+          </div>
+          <p class="install-note">WorkBuddy 会按安装说明判断是新装还是保留资料升级。</p>
+          <p class="install-note">WorkBuddy 生成日报和提醒，服务费用和额度以腾讯的现行政策为准。</p>
+        </div>
+        <p class="platform-note" id="release-status" role="status">正在核对 1.0.5 安装包。</p>
+        <details class="backup-install" id="backup-install" hidden>
+          <summary>备用下载与安装说明</summary>
+          <a class="text-link" id="direct-download" hidden>下载 1.0.5 ZIP 安装包</a>
+          <a class="text-link" id="install-guide-link" href="https://milaotou001.github.io/xiaomi-desktop-updates/install.md" hidden>查看安装与升级说明</a>
+        </details>
+        <noscript><p class="platform-note">请选中上方指令手动复制，或<a class="text-link" href="https://milaotou001.github.io/xiaomi-desktop-updates/install.md">查看安装与升级说明</a>。</p></noscript>
+      </div>
+    </section>
+
+    <section class="page-section" id="first-install" aria-labelledby="first-install-title">
+      <div class="wrap">
+        <div class="page-section-head">
+          <div>
+            <h2 id="first-install-title">第一次安装</h2>
+            <p>从安装 WorkBuddy 到看到第一份日报。图中界面为步骤示意，实际按钮以你的客户端为准。</p>
+          </div>
+          <a class="text-link" href="#deploy-pet">已装并登录 WorkBuddy？跳到第 3 步 <span class="arrow" aria-hidden="true">↓</span></a>
+        </div>
+        <ol class="first-install-steps" role="list">
+          <li>
+            <div class="install-step-copy">
+              <h3>下载 WorkBuddy</h3>
+              <p>在要安装小咪的 Windows 电脑上打开腾讯的下载页，选 <strong>WorkBuddy</strong> 下的 <strong>Windows (x64)</strong>，等下载完成。</p>
+              <a class="pill" href="https://www.codebuddy.cn/downloads/" target="_blank" rel="noopener">腾讯官方 WorkBuddy 下载 <span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <figure class="install-step-figure">
+              <div class="steps-window" aria-hidden="true"><span class="steps-window-top">腾讯官方 · 下载页</span><strong>WorkBuddy</strong><span class="steps-choice"><span>Windows (x64)</span><span>↓</span></span></div>
+              <figcaption>下载入口示意</figcaption>
+            </figure>
+          </li>
+          <li>
+            <div class="install-step-copy">
+              <h3>安装并登录 WorkBuddy</h3>
+              <p>在 Windows 的「下载」文件夹中，双击刚下载的安装程序。按向导完成安装，打开 WorkBuddy，按页面提示登录。</p>
+              <a class="text-link" href="https://cloud.tencent.com.cn/document/product/1831/134387" target="_blank" rel="noopener">查看腾讯云 Windows 安装图文 <span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <figure class="install-step-figure">
+              <div class="steps-window" aria-hidden="true"><span class="steps-window-top">Windows · 安装向导</span><div class="steps-sequence"><span>双击安装包</span><span>完成安装</span><span>打开并登录</span></div></div>
+              <figcaption>安装与登录示意</figcaption>
+            </figure>
+          </li>
+          <li id="deploy-pet">
+            <div class="install-step-copy">
+              <h3>发一句话，让 WorkBuddy 安装小咪</h3>
+              <p>复制本页的安装指令，回到 WorkBuddy 新建对话，粘贴并发送。跟着它的提示继续。</p>
+              <a class="pill" href="#install-command-box">回到安装指令 <span class="arrow" aria-hidden="true">↑</span></a>
+            </div>
+            <figure class="install-step-figure">
+              <div class="steps-window" aria-hidden="true"><span class="steps-window-top">WorkBuddy · 新对话</span><div class="steps-chat">请按说明帮我安装小咪桌宠 1.0.5，或保留资料升级。</div><span class="steps-send">发送 ↑</span></div>
+              <figcaption>粘贴并发送指令示意</figcaption>
+            </figure>
+          </li>
+          <li>
+            <div class="install-step-copy">
+              <h3>确认关注群，打开第一份日报</h3>
+              <p>由你本人在 WorkBuddy 中完成钉钉授权，选择你要关注的群，并确认是否允许小咪读取本机的日报和提醒文件。等第一份日报生成后，双击桌面上的小咪，或在系统托盘右键小咪并选「打开消息汇总」。</p>
+              <a class="text-link" href="index.html#daily-demo">看看日报示例 <span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <figure class="install-step-figure">
+              <div class="steps-window" aria-hidden="true"><span class="steps-window-top">小咪 · 消息汇总</span><div class="steps-report"><span><i class="dot dot-urgent"></i>非常紧急</span><span><i class="dot dot-action"></i>需要处理</span><span><i class="dot dot-info"></i>看一下即可</span></div></div>
+              <figcaption>第一份日报示意</figcaption>
+            </figure>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="page-section band download-help" id="feedback" aria-labelledby="help-title">
+      <div class="wrap">
+        <div class="download-help-grid">
+          <div>
+            <h2 id="help-title">安装后有疑问？</h2>
+            <details class="faq-item">
+              <summary>装好了，却还没有日报</summary>
+              <p>先确认钉钉群已授权、小咪可以读取本机日报。等 WorkBuddy 生成第一份日报后，再打开小咪的消息汇总。</p>
+            </details>
+            <details class="faq-item">
+              <summary>电脑上已经有小咪</summary>
+              <p>使用同一条安装指令，WorkBuddy 会按说明识别已有安装并保留资料。已装更新版本的用户可以继续使用现有版本。</p>
+            </details>
+          </div>
+          <div class="feedback-box">
+            <h2>反馈问题</h2>
+            <p>请注明小咪版本、卡在哪一步、看到了什么提示。公开发截图前，请遮住姓名、群聊和二维码。</p>
+            <a class="text-link" href="https://github.com/milaotou001/xiaomi-desktop-updates/issues" target="_blank" rel="noopener">前往公开反馈 <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="support-strip" id="support">
+          <div>
+            <h2>支持小咪</h2>
+            <p>支持完全自愿，下载和使用照常免费。</p>
+          </div>
+          <div>
+            <a class="pill" id="donation-link" target="_blank" rel="noopener noreferrer" hidden>请小咪吃罐罐 <span class="arrow" aria-hidden="true">↗</span></a>
+            <p id="donation-status">支持入口筹备中</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer launch-footer">
+    <div class="wrap launch-footer-inner">
+      <span>小咪桌宠</span>
+      <nav aria-label="页脚导航"><a href="index.html#daily-demo">日报示例</a><a href="#top">回到顶部 ↑</a></nav>
+    </div>
+  </footer>
+</body>
+</html>

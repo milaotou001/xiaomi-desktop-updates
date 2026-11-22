@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="小咪桌宠把 WorkBuddy 按老师身份与授权范围整理的早、午、晚日报放到桌面，三档分类，当天未处理的重要事项下一份还在。">
+  <title>小咪桌宠｜每天的工作消息，小咪帮你理清</title>
+  <link rel="icon" href="assets/xiaomi.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="index.html" aria-label="小咪桌宠首页">
+        <svg class="brand-cat" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M7.5 13.2 5.4 5.8l6.8 3.1A11.5 11.5 0 0 1 16 8.2c1.3 0 2.6.3 3.8.7l6.8-3.1-2.1 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M7.5 13.2c0 7 3.8 11.2 8.5 11.2s8.5-4.2 8.5-11.2" fill="#f7e7a8" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12.4" cy="17.2" r="1" fill="currentColor"/>
+          <circle cx="19.6" cy="17.2" r="1" fill="currentColor"/>
+          <path d="M14.6 20.5c.9.8 1.9.8 2.8 0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+        <span>小咪桌宠</span>
+      </a>
+      <button class="nav-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="index.html" aria-current="page">首页</a>
+        <a href="download.html">安装与入门</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero launch-hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">给老师的桌面日报</p>
+          <h1 class="display">工作群的重点，<br><span class="marker">桌面上看。</span></h1>
+          <p class="hero-lede">WorkBuddy 把你授权关注的钉钉群消息整理成早、午、晚报，小咪在桌面分类呈现。当天没办完的重要事项，下一份还能看到。</p>
+          <div class="hero-actions">
+            <a class="pill pill-primary" href="download.html#install-command-box">用 WorkBuddy 免费安装 <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="download.html#first-install">首次安装图文 <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-fine">正式版 1.0.5 · Windows x64 · 无需激活码</p>
+        </div>
+
+        <div class="hero-stage launch-stage" id="daily-demo">
+          <div class="demo-panel hero-window" aria-label="可操作的日报示例">
+            <div class="demo-head">
+              <div>
+                <span class="demo-title">今天的消息 · 重点</span>
+                <span class="demo-sub" id="demo-sub">11月3日 周二 · 早报 · 更新于 08:02</span>
+              </div>
+              <div class="period-switch" role="group" aria-label="切换报次">
+                <button type="button" data-period="morning" aria-pressed="true">早报</button>
+                <button type="button" data-period="noon" aria-pressed="false">午报</button>
+                <button type="button" data-period="evening" aria-pressed="false">晚报</button>
+              </div>
+            </div>
+            <div class="demo-body" id="demo-body" aria-live="polite">
+              <noscript>启用 JavaScript 后，可以切换早报、午报和晚报示例。</noscript>
+            </div>
+            <div class="demo-foot">
+              <span>示例 · 点条目可以标记已处理</span>
+              <button class="demo-reset" id="demo-reset" type="button">重置示例</button>
+            </div>
+          </div>
+          <div class="hero-cat-wrap"><img class="hero-cat" src="assets/xiaomi-roll.png" alt="躺着休息的小咪" width="480" height="520"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="launch-details" aria-label="小咪的其他功能">
+      <div class="wrap launch-detail-grid">
+        <article>
+          <h2>没办完的事，先记着</h2>
+          <p>右键选择「记着」，事项会跨天保留。办完后可以标记完成，也可以恢复。</p>
+        </article>
+        <article>
+          <h2>要紧的事，弹个提醒</h2>
+          <p>WorkBuddy 判断哪些消息要及时看，小咪在桌面提醒。点「好」表示已看过。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer launch-footer">
+    <div class="wrap launch-footer-inner">
+      <span>小咪桌宠</span>
+      <nav aria-label="页脚导航"><a href="download.html#first-install">安装帮助</a><a href="download.html#feedback">问题反馈</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
